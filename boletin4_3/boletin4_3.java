@@ -6,11 +6,13 @@ package boletin4_3;
  */
 public class boletin4_3 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Circulo tapa=new Circulo(6.9);
+        
+        System.out.println("El área de una tapa es de: "+Math.round(tapa.calcularArea())+" mm");
+        System.out.println("La longitud de una tapa es de: "+Math.round(tapa.calcularLonxitude())+" mm");
     }
     
 }
