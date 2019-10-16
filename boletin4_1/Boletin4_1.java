@@ -4,19 +4,27 @@ package boletin4_1;
  *
  * @author mmartinezcosta
  */
+
+import java.util.*;
+
 public class Boletin4_1 {
 
     
     public static void main(String[] args) {
         // TODO code application logic here
     
-    Coche cochito= new Coche();
+         Scanner sc=new Scanner(System.in);
+    int velocidadActual;
+         Coche cochito= new Coche();
     cochito.mostrar();
-     cochito.setaceleracion(10);
-    Coche cochito2= new Coche(20,30);
-   int valor=cochito2.
-
-    
+        System.out.println("La velocidad actual es:");
+     velocidadActual=sc.nextInt();
+     cochito.acelerar(velocidadActual);
+        System.out.println("Acelera: "+cochito.getVelocidade());
+     
+        System.out.println("La velocidad actual es:");
+     velocidadActual=sc.nextInt();
+     cochito.frenar(velocidadActual);
+        System.out.println("Frena hasta: "+cochito.getVelocidade());
     }
-    
 }
