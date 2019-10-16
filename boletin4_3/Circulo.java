@@ -10,5 +10,20 @@ package boletin4_3;
  * @author usuario
  */
 public class Circulo {
-    
+    private double radio;
+    final double Pi=3.14;
+
+    public Circulo(){
+    // constructor vacío
+    }
+    public Circulo(double radio){
+        this.radio=radio;
+    }
+    public double calcularArea(){
+        return Pi*Math.pow(radio, 2);
+    }
+    public double calcularLonxitude(){
+        return 2*Pi*radio;
+    }
+
 }
