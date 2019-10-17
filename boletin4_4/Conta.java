@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package boletin4_4;
 
 /**
@@ -11,15 +6,15 @@ package boletin4_4;
  */
 public class Conta {
    
-    String miguel;
+    String nome;
     String numeroCuenta;
     double tipoInteres;
     double saldo;
         
     //Constructores
-    public Conta (String migui,String numCuenta, double tipInteres, double sald){
+    public Conta (String nom,String numCuenta, double tipInteres, double sald){
         
-        miguel=migui;
+        nome=nom;
         numeroCuenta=numCuenta;  
         tipoInteres  =tipInteres;
         saldo=sald;
@@ -27,8 +22,8 @@ public class Conta {
     
     //Setters
     
-    public void setNombre(String migui){
-        miguel=migui;
+    public void setNombre(String nom){
+        nome=nom;
     }
     public void setCuenta(String numCuenta){
         numeroCuenta=numCuenta;
@@ -43,11 +38,10 @@ public class Conta {
     //Gettters 
     
     public String getCuenta(){
-        String Cuenta=numeroCuenta;
-        return Cuenta;
+        return numeroCuenta;
     }
     public String getNombre(){
-       return  miguel;
+       return  nome;
     }  
     public double getInteres(){
        return tipoInteres;
@@ -56,9 +50,21 @@ public class Conta {
        return saldo;
     }
     
+    // Ingreso
+    public void ingreso(double cantidad){
+        saldo+=cantidad;
+    }
     
-    public double ingreso(){
-        double ingreso=saldo;
-        return ingreso;
+    // Reintegro
+    public void reintegro(double cantidad){
+        saldo -= Math.abs(cantidad);       
+    }
+    
+    // Transferencia
+    public void transferenciaIngresar(Conta destino, double cantidad){
+        destino.setSueldo(destino.getSueldo() + cantidad);
+    }
+    public void transferenciaDescontar(Conta origen, double cantidad){
+        origen.setSueldo(origen.getSueldo() - cantidad);
     }
 }
